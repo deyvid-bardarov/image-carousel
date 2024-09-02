@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .carousel {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        @apply flex flex-row overflow-x-scroll scroll-smooth snap-mandatory snap-x;
+    }
+
+    .carousel-image {
+        @apply object-cover flex-1 w-full;
+    }
+}
